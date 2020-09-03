@@ -1,0 +1,19 @@
+<div
+  class="card-boxes card-boxes-{{linkSize}}x {{iconType}}"
+  (mouseover)="hover = true"
+  (mouseout)="hover = false"
+>
+  <div
+    [ngClass]="{
+      'card-boxes-inner': true,
+      'selected': isSelected === true,
+      'deselected': isSelected === false,
+      'hover': hover
+    }"
+  >
+    <div *ngIf="title" class="card-boxes-label card-boxes-label-{{linkSize}}x">{{title}}</div>
+    <p *ngIf="subtitle" class="intro">{{subtitle}}</p>
+    <app-details-link [url]="url" [label]="linkLabel" [size]="linkSize" [hover]="hover" [selected]="isSelected"></app-details-link>
+  </div>
+</div>
+

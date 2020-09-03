@@ -1,0 +1,53 @@
+
+.hero-image {
+  background-color: #b0bec5;
+  padding: 0;
+  height: 100vh;
+  width:100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+.general-card {
+  max-width: 400px;
+  padding: 0;
+  img{padding: 0;
+  width: 100%}
+}
+.header {
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0;
+  margin: 0.5em;
+  text-align: center;
+  color: teal;
+}
+.logo-general {
+  image: url('https://images.squarespace-cdn.com/content/5c72d811d74562103adbe24c/1551069772781-QXFIA3OAC1QM599GKK2C/image-asset.jpeg?content-type=image%2Fjpeg');
+  max-width: 200px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 20px;
+}
+
+.grid-container2 {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 10px;
+}
+

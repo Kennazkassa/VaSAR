@@ -1,0 +1,41 @@
+<div class="hero-image"
+>
+  <div class="container" > <div class="row">
+    <h1>About Autism DRIVE</h1>
+
+  <div class="grid-container" >
+    <app-card-boxes
+        [title]="'General Info'"
+        [subtitle]="'Go to resources'"
+        [linkSize]="1"
+        routerLink="general"
+      ></app-card-boxes>
+      <app-card-boxes
+        [title]="'Medical Info'"
+        [subtitle]="'Go to resources'"
+        [linkSize]="1"
+        routerLink="medical-info"
+      ></app-card-boxes>
+      <app-card-boxes
+        [title]="'Legal Info'"
+        [subtitle]="'Go to resources'"
+        [linkSize]="1"
+        routerLink="legal-info"
+      ></app-card-boxes>
+      <app-card-boxes
+        [title]="'Counseling Info'"
+        [subtitle]="'Go to resources'"
+        [linkSize]="1"
+        routerLink="counseling-info"
+      ></app-card-boxes>
+  </div>
+  <div class="grid-container2">
+    <app-card-boxes
+        [title]="'Know of Another Resource or Have new and Updated Info?'"
+        [subtitle]=" 'Let Us Know Here'"
+        [linkSize]="1"
+        (click)="submitFeedback()"
+    ></app-card-boxes>
+  </div></div>
+  </div>
+</div>

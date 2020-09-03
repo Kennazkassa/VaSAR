@@ -1,0 +1,110 @@
+@import '../../styles';
+
+.card-boxes{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  padding:0;
+  margin: 1em;
+  text-align: center;
+  color: black;
+
+  &.card-boxes-1x { height: 100px;}
+  &.card-boxes-2x { height: 50px;}
+
+  .card-boxes-inner {
+    &.hover {
+      &:before {
+        opacity: 0;
+      }
+
+      &:after {
+        opacity: 1;
+      }
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      pointer-events: none;
+      transition: opacity 0.5s;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0;
+    }
+
+    &:before {
+      border: 11px solid #dadada;
+      border-image: linear-gradient(teal 0%, lightseagreen 100%);
+      border-image-slice: 1;
+      opacity: 1;
+    }
+
+    &:after {
+      border: 11px solid #002f6c;
+      border-image: linear-gradient(pink 0%, #de6374 100%);
+      border-image-slice: 1;
+      opacity: 0;
+    }
+
+    &.deselected:after {
+      opacity: 0;
+    }
+
+    &.deselected:before {
+      opacity: 1;
+    }
+
+    &.selected:after {
+      opacity: 1;
+    }
+
+    &.selected:before {
+      opacity: 0;
+    }
+
+    p.intro {
+      padding: 0 20px 0 20px;
+      color: goldenrod;
+      font-weight: bold;
+    }
+
+    .card-boxes-label {
+      &.card-boxes-label-1x {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-style: inherit;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+      }
+
+      &.card-boxes-label-2x {
+        margin-top: 0;
+        margin-bottom:0;
+        font-style: italic;
+        text-transform: uppercase;
+
+
+      }
+    }
+
+    // XS - MD
+    @media (max-width: 1023px) {
+      padding: 1em;
+      .card-boxes-label.border-box-tile-label-1x { font-size: 1em; }
+      .card-boxes-label.border-box-tile-label-2x { font-size: 2em; }
+    }
+
+    // LG & XL
+    @media (min-width: 1024px) {
+      padding: 2.4375rem;
+    }
+  }
+}
